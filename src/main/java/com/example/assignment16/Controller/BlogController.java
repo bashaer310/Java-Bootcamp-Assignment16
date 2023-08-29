@@ -53,8 +53,8 @@ public class BlogController {
     public ResponseEntity getBlogById(@AuthenticationPrincipal User user,@PathVariable Integer id){
         return ResponseEntity.status(200).body(blogService.getBlogById(user,id));
     }
-    @GetMapping("/getBlogById/{title}")
-    public ResponseEntity getBlogById(@AuthenticationPrincipal User user,@PathVariable String title){
+    @GetMapping("/getBlogByTitle/{title}")
+    public ResponseEntity getBlogByTitle(@AuthenticationPrincipal User user,@PathVariable String title){
         return ResponseEntity.status(200).body(blogService.getBlogByTitle(user,title));
     }
 
