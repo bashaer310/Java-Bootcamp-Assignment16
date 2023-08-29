@@ -28,7 +28,7 @@ public class User implements UserDetails {
 
     @NotEmpty(message = "Username must not be empty")
     @Size(min = 3,message = "Username length must be more than 2")
-    @Column(columnDefinition = "varchar(30) not null check(LENGTH(username)>=3)")
+    @Column(columnDefinition = "varchar(30) unique not null check(LENGTH(username)>=3)")
     private String username;
 
 
